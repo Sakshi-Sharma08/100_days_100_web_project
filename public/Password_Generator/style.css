@@ -303,3 +303,28 @@ h1 {
     border-color: var(--vb-yellow);
     background-color: rgba(234, 179, 8, 0.1);
 }
+/* Copy to Clipboard button tooltip styling - fixes #5895 */
+.copyBtn {
+    position: relative;
+}
+
+.copyBtn [data-copyMsg] {
+    visibility: hidden;
+    opacity: 0;
+    background-color: var(--vb-cyan);
+    color: var(--dk-text);
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 6px;
+    position: absolute;
+    top: -2.2rem;
+    right: 0;
+    white-space: nowrap;
+    transition: opacity 0.2s ease;
+}
+
+.copyBtn [data-copyMsg].active {
+    visibility: visible;
+    opacity: 1;
+}
